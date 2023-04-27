@@ -1,26 +1,12 @@
-import 'package:exercise_1/style/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:http/http.dart' as http;
-import '../model/restaurant_model.dart';
-import 'dart:convert';
-
+import '../data/api/api_service.dart';
+import '../data/model/restaurant.dart';
+import '../style/style.dart';
 import 'details_items.dart';
 
 class ListItems extends StatelessWidget {
   const ListItems({super.key});
-
-  Future<List<Restaurant>> _getRestaurants() async {
-    final response = await http.get(Uri.parse(
-        'https://raw.githubusercontent.com/dicodingacademy/assets/main/flutter_fundamental_academy/local_restaurant.json'));
-
-    if (response.statusCode == 200) {
-      final Welcome welcome = Welcome.fromJson(json.decode(response.body));
-      return welcome.restaurants;
-    } else {
-      throw Exception('Failed to load restaurants');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +44,7 @@ class ListItems extends StatelessWidget {
         elevation: 0.0,
       ),
       body: FutureBuilder<List<Restaurant>>(
-        future: _getRestaurants(),
+        future: ApiService().getRestaurants(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             final restaurants = snapshot.data!;
