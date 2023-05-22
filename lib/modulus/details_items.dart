@@ -64,7 +64,7 @@ class DetailPage extends StatelessWidget {
                   ),
                   Text(item.description),
                   const SizedBox(
-                    height: 10,
+                    height: 11,
                   ),
                 ],
               ),
