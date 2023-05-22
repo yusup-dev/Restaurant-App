@@ -1,8 +1,8 @@
 import 'dart:convert';
+import 'package:exercise_1/model/restaurant.dart';
 import 'package:http/http.dart' as http;
-import '../model/restaurant.dart';
 
-class ApiService {
+class RestaurantService {
   Future<List<Restaurant>> getRestaurants() async {
     final response = await http.get(Uri.parse(
         'https://raw.githubusercontent.com/dicodingacademy/assets/main/flutter_fundamental_academy/local_restaurant.json'));
