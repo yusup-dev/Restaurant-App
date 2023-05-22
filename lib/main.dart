@@ -1,5 +1,5 @@
+import 'package:exercise_1/modulus/list_items.dart';
 import 'package:flutter/material.dart';
-import 'widgets/list_items.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Restaurant App',
       home: ListItems(),
     );

@@ -1,26 +1,12 @@
+import 'package:exercise_1/model/restaurant.dart';
+import 'package:exercise_1/service/restaurant_service.dart';
 import 'package:exercise_1/style/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:http/http.dart' as http;
-import '../model/restaurant_model.dart';
-import 'dart:convert';
-
 import 'details_items.dart';
 
 class ListItems extends StatelessWidget {
   const ListItems({super.key});
-
-  Future<List<Restaurant>> _getRestaurants() async {
-    final response = await http.get(Uri.parse(
-        'https://raw.githubusercontent.com/dicodingacademy/assets/main/flutter_fundamental_academy/local_restaurant.json'));
-
-    if (response.statusCode == 200) {
-      final Welcome welcome = Welcome.fromJson(json.decode(response.body));
-      return welcome.restaurants;
-    } else {
-      throw Exception('Failed to load restaurants');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +19,7 @@ class ListItems extends StatelessWidget {
           child: Text(
             "Restaurant",
             style: TextStyle(
-                color: greyColor2, fontSize: 30, fontWeight: FontWeight.w400),
+                color: Colors.white, fontSize: 30, fontWeight: FontWeight.w400),
           ),
         ),
         toolbarHeight: 120.0,
@@ -46,19 +32,16 @@ class ListItems extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: const Text(
                 'Recommendation restaaurant for you!',
-                style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                    color: greyColor1),
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
               ),
             ),
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blue,
         elevation: 0.0,
       ),
       body: FutureBuilder<List<Restaurant>>(
-        future: _getRestaurants(),
+        future: RestaurantService().getRestaurants(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             final restaurants = snapshot.data!;
@@ -74,7 +57,7 @@ class ListItems extends StatelessWidget {
                         builder: (context) => DetailPage(item: restaurant)));
                   },
                   child: Container(
-                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    margin: const EdgeInsets.only(top: 24),
                     child: ListTile(
                       leading: Hero(
                           tag: restaurant,
@@ -82,8 +65,8 @@ class ListItems extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             child: Image.network(
                               restaurant.pictureId,
-                              height: 150,
-                              width: 80,
+                              height: 200,
+                              width: 100,
                               fit: BoxFit.cover,
                             ),
                           )),
@@ -117,8 +100,8 @@ class ListItems extends StatelessWidget {
                               children: [
                                 const Icon(
                                   Icons.star,
-                                  size: 12,
-                                  color: greyColor2,
+                                  size: 17,
+                                  color: Color.fromARGB(255, 241, 222, 53),
                                 ),
                                 const SizedBox(
                                   width: 3,

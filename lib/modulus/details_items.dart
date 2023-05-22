@@ -1,6 +1,6 @@
-import 'package:exercise_1/model/restaurant_model.dart';
-import 'package:exercise_1/style/style.dart';
+import 'package:exercise_1/model/restaurant.dart';
 import 'package:flutter/material.dart';
+import '../style/style.dart';
 
 class DetailPage extends StatelessWidget {
   final Restaurant item;
@@ -27,7 +27,7 @@ class DetailPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 15,
+                    height: 14,
                   ),
                   Text(
                     item.name,
@@ -72,7 +72,7 @@ class DetailPage extends StatelessWidget {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
               child: const Text(
-                "Menus",
+                "Menu Food and Drink",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -106,7 +106,7 @@ class DetailPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(
                             image: NetworkImage(
-                                'https://cdn06.pramborsfm.com/storage/app/media/Prambors/cropped-images/makanan%20khas%20indonesia-20201102094622.jpg?tr=w-800'),
+                                'https://cdn.dribbble.com/users/1012997/screenshots/14086465/hunger-station-dribbble_4x.png'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -122,14 +122,6 @@ class DetailPage extends StatelessWidget {
                                     style: const TextStyle(
                                       color: blackColor,
                                       fontSize: 15,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  const Text(
-                                    'IDR 15.000',
-                                    style: TextStyle(
-                                      color: greyColor3,
-                                      fontSize: 12,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
@@ -149,7 +141,7 @@ class DetailPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(
                               image: NetworkImage(
-                                  'https://www.ruparupa.com/blog/wp-content/uploads/2021/12/es-buah-pelangi.jpg'),
+                                  'https://st3.depositphotos.com/5261163/35893/v/450/depositphotos_358930134-stock-illustration-funny-take-away-glass-and.jpg'),
                               fit: BoxFit.cover),
                         ),
                         child: Stack(
@@ -164,14 +156,6 @@ class DetailPage extends StatelessWidget {
                                     style: const TextStyle(
                                       color: Colors.black,
                                       fontSize: 15,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  const Text(
-                                    'IDR 15.000',
-                                    style: TextStyle(
-                                      color: greyColor3,
-                                      fontSize: 12,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
