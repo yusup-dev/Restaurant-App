@@ -1,6 +1,6 @@
 import 'package:exercise_1/model/restaurant.dart';
 import 'package:exercise_1/service/restaurant_service.dart';
-import 'package:exercise_1/style/style.dart';
+import 'package:exercise_1/common/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'details_items.dart';
