@@ -27,7 +27,7 @@ class DetailPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 15,
+                    height: 14,
                   ),
                   Text(
                     item.name,
