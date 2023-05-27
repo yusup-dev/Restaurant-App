@@ -1,6 +1,7 @@
 import 'dart:convert';
-import 'package:exercise_1/model/model_list.dart';
 import 'package:http/http.dart' as http;
+
+import '../model/model_list.dart';
 
 class ServiceList {
   Future<List<ModelList>> getList() async {

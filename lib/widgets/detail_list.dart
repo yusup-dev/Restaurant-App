@@ -1,6 +1,6 @@
-import 'package:exercise_1/common/style.dart';
-import 'package:exercise_1/model/model_list.dart';
 import 'package:flutter/material.dart';
+import '../common/style.dart';
+import '../model/model_list.dart';
 
 class DetailList extends StatelessWidget {
   final ModelList item;
@@ -27,7 +27,7 @@ class DetailList extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: 16,
+                    top: 15,
                     child: IconButton(
                       icon: const Icon(Icons.arrow_back),
                       color: Colors.white,
