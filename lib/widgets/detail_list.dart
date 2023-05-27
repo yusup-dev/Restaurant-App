@@ -27,7 +27,7 @@ class DetailList extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: 16,
+                    top: 15,
                     child: IconButton(
                       icon: const Icon(Icons.arrow_back),
                       color: Colors.white,
