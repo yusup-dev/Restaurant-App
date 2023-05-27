@@ -3,11 +3,11 @@ class Welcome {
     required this.restaurants,
   });
 
-  List<Restaurant> restaurants;
+  List<ModelList> restaurants;
 
   factory Welcome.fromJson(Map<String, dynamic> json) => Welcome(
-        restaurants: List<Restaurant>.from(
-            json["restaurants"].map((x) => Restaurant.fromJson(x))),
+        restaurants: List<ModelList>.from(
+            json["restaurants"].map((x) => ModelList.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -15,8 +15,8 @@ class Welcome {
       };
 }
 
-class Restaurant {
-  Restaurant({
+class ModelList {
+  ModelList({
     required this.id,
     required this.name,
     required this.description,
@@ -34,7 +34,7 @@ class Restaurant {
   double rating;
   Menus menus;
 
-  factory Restaurant.fromJson(Map<String, dynamic> json) => Restaurant(
+  factory ModelList.fromJson(Map<String, dynamic> json) => ModelList(
         id: json["id"],
         name: json["name"],
         description: json["description"],
