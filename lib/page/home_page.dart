@@ -1,8 +1,8 @@
-import 'package:exercise_1/model/model_list.dart';
-import 'package:exercise_1/service/service_list.dart';
-import 'package:exercise_1/common/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import '../common/style.dart';
+import '../model/model_list.dart';
+import '../service/service_list.dart';
 import '../widgets/detail_list.dart';
 
 class HomePage extends StatelessWidget {

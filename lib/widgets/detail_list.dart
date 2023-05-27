@@ -1,6 +1,6 @@
-import 'package:exercise_1/common/style.dart';
-import 'package:exercise_1/model/model_list.dart';
 import 'package:flutter/material.dart';
+import '../common/style.dart';
+import '../model/model_list.dart';
 
 class DetailList extends StatelessWidget {
   final ModelList item;
