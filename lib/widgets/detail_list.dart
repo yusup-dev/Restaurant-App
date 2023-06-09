@@ -93,7 +93,7 @@ class DetailList extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: Container(
                         width: 130,
-                        color: Color.fromARGB(255, 234, 233, 233),
+                        color: const Color.fromARGB(255, 234, 233, 233),
                         child: Column(
                           children: [
                             ClipRRect(
@@ -137,14 +137,14 @@ class DetailList extends StatelessWidget {
                 height: 120,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: item.menus.foods.length,
+                  itemCount: item.menus.drinks.length,
                   itemBuilder: (context, index) {
-                    final food = item.menus.foods[index];
+                    final food = item.menus.drinks[index];
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: Container(
                         width: 130,
-                        color: Color.fromARGB(255, 234, 233, 233),
+                        color: const Color.fromARGB(255, 234, 233, 233),
                         child: Column(
                           children: [
                             ClipRRect(
@@ -152,7 +152,7 @@ class DetailList extends StatelessWidget {
                                   bottomLeft: Radius.circular(8),
                                   bottomRight: Radius.circular(8)),
                               child: Image.network(
-                                "https://i0.wp.com/blog.duniamasak.com/wp-content/uploads/ilustrasi-makanan-sayur-lodeh-via-pinterest-ala-duniamasak.jpg?fit=564%2C564&ssl=1",
+                                "https://st3.depositphotos.com/29748840/36986/v/450/depositphotos_369869960-stock-illustration-mojito-flat-colorful-flat-icon.jpg",
                                 width: 130,
                                 height: 80,
                                 fit: BoxFit.cover,
